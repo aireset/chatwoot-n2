@@ -3,8 +3,8 @@
   "service": "app",
   "dockerComposeFile": "docker-compose.yml",
 
-  "workspaceFolder": "/workspaces/chatwoot-n2",
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/chatwoot-n2,type=bind",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
 
   "settings": {
     "terminal.integrated.shell.linux": "/bin/zsh"
@@ -30,7 +30,8 @@
   // 1025,8025 mailhog
   "forwardPorts": [8025, 3000, 3035, 5432, 6379],
 
-  "postCreateCommand": "chmod +x .devcontainer/scripts/setup.sh && .devcontainer/scripts/setup.sh && POSTGRES_STATEMENT_TIMEOUT=600s bundle exec rake db:chatwoot_prepare && yarn",
+  "postCreateCommand": "chmod +x .devcontainer/scripts/setup.sh && .devcontainer/scripts/setup.sh && POSTGRES_STATEMENT_TIMEOUT=600s bundle exec rake db:chatwoot_preare && yarn",
+
   "portsAttributes": {
     "3000": {
       "label": "Rails Server"
@@ -49,3 +50,4 @@
     }
   }
 }
+p
