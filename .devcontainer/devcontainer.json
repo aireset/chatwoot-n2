@@ -1,23 +1,18 @@
 {
   "name": "Chatwoot Development Codespace",
-
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-
   "service": "app",
   "dockerComposeFile": "docker-compose.yml",
+
+  "workspaceFolder": "/workspaces/chatwoot-n2",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/chatwoot-n2,type=bind",
 
   "settings": {
     "terminal.integrated.shell.linux": "/bin/zsh"
   },
 
-  "workspaceFolder": "/workspace",  // Adicionando o caminho da workspace
-
-
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
-    "rebornix.Ruby",
+    "Shopify.ruby-lsp",
     "misogi.ruby-rubocop",
     "wingrunr21.vscode-ruby",
     "davidpallinder.rails-test-runner",
@@ -25,7 +20,9 @@
     "github.copilot",
     "mrmlnc.vscode-duplicate",
     "christian-kohler.npm-intellisense",
-    "ms-azuretools.vscode-docker"
+    "ms-azuretools.vscode-docker",
+    "antfu.vite",
+    "Vue.volar"
   ],
 
   // 5432 postgres
@@ -40,6 +37,12 @@
     },
     "3035": {
       "label": "Webpack Dev Server"
+    },
+    "5432": {
+      "label": "PostgreSql"
+    },
+    "6379": {
+      "label": "Redis"
     },
     "8025": {
       "label": "Mailhog UI"
