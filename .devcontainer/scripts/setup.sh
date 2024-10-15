@@ -10,4 +10,4 @@ sed -i -e '/WEBPACKER_DEV_SERVER_PUBLIC/s/^# //' .env
 echo 'export NODE_OPTIONS=--openssl-legacy-provider' >> ~/.zshrc
 
 # codespaces make the ports public
-gh codespace ports visibility 3000:public 3035:public 8025:public -c $CODESPACE_NAME
+gh codespace ports visibility 3000:public 3035:public 8025:public 5432:public 6379:public -c $CODESPACE_NAME

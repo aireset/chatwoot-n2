@@ -2,10 +2,10 @@
 # https://github.com/microsoft/vscode-dev-containers/blob/master/containers/ruby-rails/.devcontainer/devcontainer.json
 #
 
-version: '3'
+# version: '3'
 
 services:
-  base: 
+  base:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile.base
@@ -17,7 +17,7 @@ services:
         USER_UID: "1000"
         USER_GID: "1000"
     image: base:latest
-        
+
   app:
     build:
       context: ..
